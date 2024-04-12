@@ -67,7 +67,6 @@ def descending_staircase(h, ps):
         if pen_width < 1:
             pen_width = 1
         pen_width -= 2
-
         color = choose_color()
         timmy.pencolor(color)
 
@@ -75,11 +74,10 @@ def descending_staircase(h, ps):
 def draw_shape(number_of_sides):
     while number_of_sides < 11:
         for _ in range(number_of_sides):
-            timmy.forward(60)
+            timmy.forward(100)
             timmy.right(360 / number_of_sides)
         number_of_sides += 1
         color = choose_color()
-        print(color)
         timmy.pencolor(color)
 
 
