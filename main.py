@@ -1,6 +1,6 @@
 # Methods to import modules
 # 1
-from turtle import Turtle, Screen
+from turtle import Turtle, Screen, colormode
 import random
 
 color_array = ['AliceBlue', 'AntiqueWhite', 'AntiqueWhite3', 'AntiqueWhite4', 'aquamarine',
@@ -8,7 +8,7 @@ color_array = ['AliceBlue', 'AntiqueWhite', 'AntiqueWhite3', 'AntiqueWhite4', 'a
                'BlueViolet', 'brown', 'brown4', 'burlywood', 'burlywood4']
 used_colors = []
 
-direction = ['forward', 'left', 'right', 'backward']
+
 # 2
 # import turtle
 
@@ -22,9 +22,17 @@ import heroes
 
 timmy = Turtle()
 screen = Screen()
+print(colormode())
 
-timmy.shape("turtle")
-print(timmy.shape())
+#direction = [timmy.forward(30), timmy.left(90), timmy.right(90), timmy.backward(90)]
+#timmy.shape("turtle")
+timmy.pensize(10)
+#print(timmy.shape())
+
+
+def rgb_color():
+    color = (random.random(), random.random(), random.random())
+    return color
 
 
 def dash_line(i):
@@ -37,11 +45,21 @@ def dash_line(i):
 
 def move():
     move_counter = 0
-    while move_counter < 11:
-        timmy.forward(30)
-        timmy.left(90)
-        timmy.forward(30)
-        timmy.right(90)
+    while move_counter < 501:
+        number = round(random.random() * 4)
+        timmy.pensize(10)
+        if number == 0:
+            timmy.pencolor(rgb_color())
+            timmy.forward(30)
+        elif number == 1:
+            timmy.pencolor(rgb_color())
+            timmy.left(90)
+        elif number == 2:
+            timmy.pencolor(rgb_color())
+            timmy.backward(30)
+        elif number == 3:
+            timmy.pencolor(rgb_color())
+            timmy.right(90)
         move_counter += 1
 
 move()
