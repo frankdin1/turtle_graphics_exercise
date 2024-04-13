@@ -23,10 +23,10 @@ import heroes
 timmy = Turtle()
 screen = Screen()
 print(colormode())
-timmy.speed(10)
+#timmy.speed(10)
 direction = [0, 90, 180, 270]
 #timmy.shape("turtle")
-timmy.pensize(10)
+#timmy.pensize(10)
 #print(timmy.shape())
 
 
@@ -69,7 +69,7 @@ def move():
         move_counter += 1
 
 #move()
-move_with_direction_array()
+#move_with_direction_array()
 def choose_color():
     # choose a random color
     color_choice = color_array[round(random.random() * len(color_array) - 1)]
@@ -117,7 +117,14 @@ def draw_shape(number_of_sides):
         color = choose_color()
         timmy.pencolor(color)
 
+def draw_spirograph(n, a):
+    for _ in range(n):
+        timmy.circle(40)
+        timmy.left(a)
 
+number_of_circles = 10
+angle = 360/number_of_circles
+draw_spirograph(number_of_circles, angle)
 # initial_number_of_sides = 3
 # draw_shape(initial_number_of_sides)
 
