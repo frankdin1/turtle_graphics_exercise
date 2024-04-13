@@ -24,7 +24,7 @@ timmy = Turtle()
 screen = Screen()
 print(colormode())
 timmy.speed(10)
-#direction = [timmy.forward(30), timmy.left(90), timmy.right(90), timmy.backward(90)]
+direction = [0, 90, 180, 270]
 #timmy.shape("turtle")
 timmy.pensize(10)
 #print(timmy.shape())
@@ -42,6 +42,12 @@ def dash_line(i):
         timmy.forward(10)
         timmy.pd()
 
+
+def move_with_direction_array():
+    for _ in range(200):
+        timmy.pencolor(rgb_color())
+        timmy.forward(30)
+        timmy.setheading(random.choice(direction))
 
 def move():
     move_counter = 0
@@ -62,7 +68,8 @@ def move():
             timmy.right(90)
         move_counter += 1
 
-move()
+#move()
+move_with_direction_array()
 def choose_color():
     # choose a random color
     color_choice = color_array[round(random.random() * len(color_array) - 1)]
