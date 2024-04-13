@@ -7,6 +7,8 @@ color_array = ['AliceBlue', 'AntiqueWhite', 'AntiqueWhite3', 'AntiqueWhite4', 'a
                'aquamarine4', 'azure3', 'azure4', 'beige', 'bisque2', 'bisque4', 'blue', 'blue4',
                'BlueViolet', 'brown', 'brown4', 'burlywood', 'burlywood4']
 used_colors = []
+
+direction = ['forward', 'left', 'right']
 # 2
 # import turtle
 
@@ -33,6 +35,16 @@ def dash_line(i):
         timmy.pd()
 
 
+def move():
+    move_counter = 0
+    while move_counter < 11:
+        timmy.forward(30)
+        timmy.left(90)
+        timmy.forward(30)
+        timmy.right(90)
+        move_counter += 1
+
+move()
 def choose_color():
     # choose a random color
     color_choice = color_array[round(random.random() * len(color_array) - 1)]
@@ -81,8 +93,8 @@ def draw_shape(number_of_sides):
         timmy.pencolor(color)
 
 
-initial_number_of_sides = 4
-draw_shape(initial_number_of_sides)
+# initial_number_of_sides = 3
+# draw_shape(initial_number_of_sides)
 
 # staircase_height = 10
 # pen_size = 20
