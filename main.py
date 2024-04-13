@@ -117,19 +117,24 @@ def draw_shape(number_of_sides):
         color = choose_color()
         timmy.pencolor(color)
 
+
 def draw_spirograph(n, a):
+    timmy.speed("fast")
     for _ in range(n):
+        timmy.pencolor(rgb_color())
         timmy.circle(40)
         timmy.left(a)
 
-number_of_circles = 10
+
+number_of_circles = 100
 angle = 360/number_of_circles
 draw_spirograph(number_of_circles, angle)
-# initial_number_of_sides = 3
+
+initial_number_of_sides = 3
 # draw_shape(initial_number_of_sides)
 
-# staircase_height = 10
-# pen_size = 20
+staircase_height = 10
+pen_size = 20
 # descending_staircase(staircase_height, pen_size)
 
 screen.exitonclick()  # this line has to be last
