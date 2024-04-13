@@ -8,7 +8,7 @@ color_array = ['AliceBlue', 'AntiqueWhite', 'AntiqueWhite3', 'AntiqueWhite4', 'a
                'BlueViolet', 'brown', 'brown4', 'burlywood', 'burlywood4']
 used_colors = []
 
-direction = ['forward', 'left', 'right']
+direction = ['forward', 'left', 'right', 'backward']
 # 2
 # import turtle
 
