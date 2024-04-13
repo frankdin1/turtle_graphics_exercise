@@ -23,7 +23,7 @@ import heroes
 timmy = Turtle()
 screen = Screen()
 print(colormode())
-
+timmy.speed(10)
 #direction = [timmy.forward(30), timmy.left(90), timmy.right(90), timmy.backward(90)]
 #timmy.shape("turtle")
 timmy.pensize(10)
@@ -45,7 +45,7 @@ def dash_line(i):
 
 def move():
     move_counter = 0
-    while move_counter < 501:
+    while move_counter < 201:
         number = round(random.random() * 4)
         timmy.pensize(10)
         if number == 0:
